@@ -48,7 +48,7 @@
     
     for (int i = 0; i < _numLevels; i++){
         CGFloat x = (frameWidth - buttonWidth) / 2;
-        CGFloat y = buttonSpace + buttonSpace * i;
+        CGFloat y = 2 * buttonSpace + buttonSpace * i;
         CGRect buttonFrame = CGRectMake(x, y, buttonWidth, buttonHeight);
         
         UIButton* button = [[UIButton alloc] initWithFrame:buttonFrame];
@@ -103,7 +103,7 @@
 
 - (void)backToMain:(id)sender
 {
-    MenuViewController* menuVC = [[MenuViewController alloc] initWithLanguage:_language];
+    MenuViewController* menuVC = [MenuViewController alloc];
     [self presentViewController:menuVC animated:NO completion:nil];
 }
 
